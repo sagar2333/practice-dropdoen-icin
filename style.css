@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    color:#3498bd;
+    text-decoration: none;
+}
+nav{
+    background: red;
+}
+nav ul{
+    text-align: center;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+  
+}
+nav ul li a{
+    padding: 10px 20px;
+    display: block;
+    border-right: 1px solid#ddd;
+    margin-left: -4px;
+}
+nav ul li:first-child a{
+    border-left: 1px solid#ddd;
+
+}
+nav ul li:hover >a{
+    background: blue;
+}
+/*DROPDOWN MANU*/
+nav ul li{
+    position: relative;
+}
+nav ul li ul{
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    width: 200px;
+    background: red;
+    transition: .2s;
+}
+nav ul li ul li{
+    display: block;
+  
+
+}
+nav ul li ul li a{
+    margin-left: 0px;
+    border-bottom: 1px solid#ddd;
+    
+}
+nav ul li ul li:first-child a{
+    border-top: 1px solid#ddd;
+
+}
+/*HOVER PART*/
+nav ul li ul{
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: top center;
+}
+nav ul li:hover ul{
+    visibility:visible;
+    opacity: 1;
+    transform: scale(1);
+
+}
+.social{
+    background: blue;
+
+}
+.social ul{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 40px;
+   
+}
+.social ul li{
+    list-style: none;
+    display: inline-block;
+    padding-right: 10px;
+}
+.social ul li a{
+    font-size: 25px;
+    margin-top: 5px;
+    display: block;
+    
+}
+.button-before{
+   text-align: left;
+   margin-top: 30px;
+   margin-left: 20px;
+   
+}
+.click{
+    font-size: 20px;
+    border-radius: 5px;
+    position: relative;
+    background: blue;
+    padding: 5px 10px;
+    z-index: 1;
+}
+.click::before{
+    content: "";
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: blue;
+    border-radius: 5px;
+    background: red;
+    transition: .5s;
+    z-index: -1;
+}
+.click:hover::before{
+    content: "";
+    width:100%;
+}
+.list-item{}
+.list-item ul{
+    margin-top: 15px;
+}
+.list-item ul li{
+    list-style: none;
+    margin-left: 30px;
+    font-size: 25px;
+    line-height: 40px;
+    
+}
+.list-item ul li::before{
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: red;
+    font-size: 20px;
+    margin-right: 25px;
+}
+/*fLOAT PRACTICE*/
+.row{
+    width: 1200px;
+    height: 300px;
+    border: 1px solid #ddd;
+    background-color: rgb(167, 157, 157);
+    display: block;
+    margin: auto;
+    clear: both;
+}
+.collumn1{
+    width: 290px;
+    height: 200px;
+    background: blue;
+    float: left;
+    margin: 50px;
+}
+.collumn2{
+    width: 290px;
+    height: 200px;
+    background: red;
+    float: left;
+    margin-left: 100px;
+    margin-top: 50px;
+  
+
+}
+.collumn3{
+    width: 290px;
+    height: 200px;
+    background: orange;
+    float: right;
+    margin: 50px;
+
+}
